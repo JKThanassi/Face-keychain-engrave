@@ -8,6 +8,7 @@ fileUID = str(random.randint(0,100000))
 if not cap.isOpened():
         cap.open()
 
+#Will need to change this from system to system        
 face_cascade = cv2.CascadeClassifier('C:\\Users\\josep\\Anaconda3\\envs\\pyDev\\Library\\etc\\haarcascades\\haarcascade_frontalface_default.xml')
 
 while (True):
