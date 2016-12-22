@@ -8,7 +8,7 @@ fileUID = str(random.randint(0,100000))
 if not cap.isOpened():
         cap.open()
 
-#Will need to change this from system to system        
+# Will need to change this from system to system
 face_cascade = cv2.CascadeClassifier('C:\\Users\\josep\\Anaconda3\\envs\\pyDev\\Library\\etc\\haarcascades\\haarcascade_frontalface_default.xml')
 
 while (True):
@@ -34,14 +34,14 @@ while (True):
         break
     
     
-template = cv2.imread('keychain template.png')
+template = cv2.imread('new_template.png')
 
-resized = cv2.resize(camImg,(50,50), interpolation=cv2.INTER_AREA)
+resized = cv2.resize(camImg,(200,200), interpolation=cv2.INTER_AREA)
 
 
-for i in range(20,70):
-    for j in range(110,160):
-        template[i][j] = resized[i-20][j-110]
+for i in range(200,400):
+    for j in range(525,725):
+        template[i][j] = resized[i-200][j-525]
 
 cv2.imwrite("Keychain_Template_"+str(fileUID) +".png",template)
 
@@ -50,6 +50,6 @@ cv2.imwrite("Keychain_Template_"+str(fileUID) +".png",template)
 
 
 
-#print(template.shape())
+
 
 
