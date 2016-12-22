@@ -37,7 +37,7 @@ while (True):
 template = cv2.imread('new_template.png')
 
 resized = cv2.resize(camImg,(200,200), interpolation=cv2.INTER_AREA)
-resized = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
+# resized = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
 
 
 for i in range(200,400):
